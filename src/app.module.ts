@@ -5,11 +5,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { IdeaModule } from './idea/idea.module';
 import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { HttpErrorFilte } from './shared/http-error.filter';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(),
     IdeaModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService, {

@@ -31,7 +31,6 @@ export class IdeaController {
     }
 
     @Delete(':id')
-    @UsePipes(new ValidationPipe())
     destoryIdea(@Param('id') id: string) {
         this.ideaservice.destroy(id);
     }
